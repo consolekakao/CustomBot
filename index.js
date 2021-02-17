@@ -127,23 +127,9 @@ client.once("ready", () => {
 
     }
 
-
-
-    if(message.content.startsWith(`!ttt`)){
-      if(message.member.voice.channel){
-      let channel = message.member.voice.channel;
-       for (let member of channel.members) {
-          if(member[1].roles.cache.has('811550967081205770') || member[1].roles.cache.has('811551330753183755') ){ 
-         member[1].voice.setSelfMute(false)
-          }
-       }
-      }
-
-      else{
-          message.reply('먼저 음성채널에 참가해주세요.')
-      }
-     }
-
+    else if(message.content.includes(`help`)){
+      message.reply(`\n!마이크차단 (참가자 전원 마이크 차단) \n!마이크해제 (참가자 전원 마이크 차단해제) \n!헤드셋차단 (참가자 전원 헤드셋 차단)\n!헤드셋해제 (참가자 전원 헤드셋 차단해제)\n!전체차단 (참가자 전원 마이크/헤드셋 차단)\n!전체해제 (참가자 전원 마이크/헤드셋 차단해제)`)
+    }
 
 
     
