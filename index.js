@@ -74,7 +74,7 @@ client.once("ready", () => {
         if(i == 0 ) reply += `\n  ${String(result[i].score).padEnd(5)}  ${result[i].name} \`🥇 ${i+1}위 \`\n`
       else if(i == 1 ) reply += `\n  ${String(result[i].score).padEnd(5)}  ${result[i].name} \`🥈 ${i+1}위 \`\n`
       else if(i == 2 ) reply += `\n  ${String(result[i].score).padEnd(5)}  ${result[i].name} \`🥉 ${i+1}위 \`\n`
-      else reply += `\n  ${String(result[i].score).padEnd(5)}  ${result[i].name} \` ${i}위 \`\n`
+      else reply += `\n  ${String(result[i].score).padEnd(5)}  ${result[i].name} \` ${i+1}위 \`\n`
       }
       message.reply(reply);
             }
